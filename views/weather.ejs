@@ -3,12 +3,28 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript">
+
+		var apikey = 'e312dbeb8840e51f92334498a261ca1d';
+		var weatherUrl = "http://api.openweathermap.org/data/2.5/weather?q=Atlanta&units=imperial&APPID="+apikey;
+
+		$.getJSON(weatherUrl, function(weatherData){
+			console.log(weatherData);
+		});
+
+
+	</script>
+
 </head>
 <body>
 
 	<h1 class="title"></h1>
 
-		The temp in Atlanta is <%= body.main.temp %>
+		The temp in Atlanta is <%= weatherObject.main.temp %>
+		<hr />
+		<%= varType %>
 
 </body>
 </html>
