@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+</head>
+<body>
+
+	<h1 class="title">About Page</h1>
+	<p>Welcome to <%= title %></p>
+	<p>THis is the about page for DC Class.</p>
+
+	<p>Class members include:</p>
+	<ul>
+		<% for(var i=0; i<students.length; i++){ %>
+			<li><%= students[i] %></li>
+		<% } %>
+	</ul>
+
+</body>
+</html>
